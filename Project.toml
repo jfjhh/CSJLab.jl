@@ -3,6 +3,18 @@ uuid = "20247e0c-133c-11ea-2166-8b5f0e6be241"
 authors = ["jfjhh <alex.striff1@gmail.com>"]
 version = "0.1.0"
 
+[deps]
+Convex = "f65535da-76fb-5f13-bab9-19810c17039a"
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
+FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
+GenSPGL = "46767539-6b09-4d43-90af-09e8ecbe3fb9"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
+JOLI = "bb331ad6-a1cf-11e9-23da-9bcb53c69f6f"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+SCS = "c946c3f1-0d1f-5ce8-9dea-7daa1f7e2d13"
+
 [compat]
 julia = "1"
 
