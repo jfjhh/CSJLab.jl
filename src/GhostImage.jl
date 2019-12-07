@@ -1,16 +1,6 @@
-__precompile__()
-
-"""
-## Computational Ghost Imaging
-"""
-module GhostImage
+# Computational Ghost Imaging
 
 export ghostimage, simulate_ghostimage
-
-using LinearAlgebra
-using Images
-
-include("Utils.jl")
 
 function ghostimage(cs)
     N   = length(cs.measurements)
@@ -22,6 +12,4 @@ function ghostimage(cs)
 end
 
 simulate_ghostimage(img, m) = ghostimage(measure(img, m))
-
-end
 

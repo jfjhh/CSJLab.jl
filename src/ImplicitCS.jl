@@ -1,19 +1,5 @@
-__precompile__()
-
-"""
-Implicit compressed sensing via the GenSPGL package, which allows an implicit
-DCT-II transform that significantly speeds things up.
-"""
-module ImplicitCS
-
-using LinearAlgebra
-using LinearAlgebra.BLAS
-using Images
-using FFTW
-using JOLI
-using GenSPGL
-
-include("Utils.jl")
+# Implicit compressed sensing via the GenSPGL package, which allows an implicit
+# DCT-II transform that significantly speeds things up.
 
 export csimage, simulate_csimage
 
@@ -34,7 +20,5 @@ end
 "Simulate compressed sensing of `img` with `m` measurements."
 function simulate_csimage(img, m, σ = dσ, options = doptions)
     spgl_sense(measure(imvec(img), m), σ, options)
-end
-
 end
 

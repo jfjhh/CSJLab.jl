@@ -1,9 +1,6 @@
 # Utility functions for compressed sensing
-__precompile__()
-
-using LinearAlgebra
-using Images
-using DelimitedFiles
+export CSImage, loadimage, imvec, vecim, randmask, measure, SNR, renormalize
+export binvalue, contrast
 
 "Compressed sensing image data"
 struct CSImage{T}
@@ -96,5 +93,5 @@ function binvalue(values, bins = (values[2:end] + values[1:end-1]) ./ 2.0)
 end
 
 "Change contrast and brightness of `img` by a clamped linear transformation."
-contrast(a, b, img) = Gray.(clamp.(a .* img .+ b, 0.0, 1.0))
+contrast(a, b, img) = Gray.(clamp01.(a .* img .+ b))
 

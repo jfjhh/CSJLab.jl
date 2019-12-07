@@ -1,5 +1,3 @@
-__precompile__()
-
 """
 # Compressed sensing JLab project code
 
@@ -11,11 +9,16 @@ This package provides three ways to form "single-pixel" images.
 """
 module CSJLab
 
-export CSImage, loadimage, imvec, vecim, randmask, measure, SNR, renormalize, binvalue, contrast
+using LinearAlgebra
+using LinearAlgebra.BLAS
+using DelimitedFiles
+using Images.ImageCore
+using FFTW
+using JOLI
+using GenSPGL
 
 include("Utils.jl")
 include("GhostImage.jl")
-include("ExplicitCS.jl")
 include("ImplicitCS.jl")
 
 end # module
