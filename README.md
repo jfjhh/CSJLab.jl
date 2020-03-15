@@ -1,5 +1,7 @@
 # CSJLab
 
+[![DOI](https://zenodo.org/badge/226453871.svg)](https://zenodo.org/badge/latestdoi/226453871)
+
 This is a small Julia package that provides *computational ghost imaging* and
 *compressed sensing* (basis pursuit denoising) functionality for constructing
 images using a "single-pixel camera" proof-of-concept.
